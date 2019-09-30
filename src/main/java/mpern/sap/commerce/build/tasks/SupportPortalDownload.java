@@ -139,6 +139,7 @@ public class SupportPortalDownload extends DefaultTask {
             } else {
                 download = new URI(infoFile.getDownloadUrl());
             }
+            getLogger().debug("found download URL", download);
 
             CookieManager cookies = new CookieManager();
             HttpURLConnection connection = HttpUtils.open(download, cookies);
